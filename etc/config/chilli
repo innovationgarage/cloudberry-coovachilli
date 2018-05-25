@@ -1,0 +1,50 @@
+# vim: filetype=uci
+
+config chilli
+    option radiusnasid "nasid01"
+    option radiussecret "<secret>"
+    option uamsecret "<secret>"
+
+    option locationname "OpenWrt"
+    option radiuslocationname "OpenWrt,1"
+    option radiuslocationid 	"network=OpenWrt"
+    
+    option radiusserver1 "147.75.32.61"
+    option radiusserver2 "147.75.32.61"
+    
+    option dhcpif "br-lan"
+
+    option dns1 8.8.8.8
+    option dns2 8.8.4.4
+
+    option tundev 'tun0'
+    option net 192.168.180.0/22
+    option uamlisten 192.168.182.1
+    option lease 86400
+    option leaseplus 600
+    
+    option uamserver "http://147.75.32.61/login/cp/index.html"
+    option uamuiport 4990
+    option uamanydns 1
+    option uamaliasname login
+    option nouamsuccess 1
+
+    option uamallowed "147.75.32.61,\
+                       192.168.0.10,\
+                       192.168.0.3,\
+		       100.85.197.11,\
+                       100.86.65.1,\
+                       100.86.65.181,\
+                       195.88.55.16,\
+                       www.google.com,\
+                       www.vg.no,\
+                       www.finn.no"
+
+    option swapoctets 1
+    option interval 3600
+
+    option network ''
+    option domain "lan"
+    
+    option ipup '/etc/chilli/up.sh'
+    option ipdown '/etc/chilli/down.sh'
