@@ -17,3 +17,5 @@ Configuration to be used with a cloudberry chilli deployment.
   stopping and starting when doing configuration changes. Also verifying that
   chilli is running via `ps` is a good idea.
 - Don't mix WAN and LAN.
+- Disable dnsmasq, chilli already handles DHCP requests so having both dnsmasq
+  running might cause issues.
