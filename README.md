@@ -2,6 +2,9 @@
 
 Configuration to be used with a cloudberry chilli deployment.
 
+Please note that all occurrences of `please-change-me` must be updated with the
+correct values.  Running grep should show all occurrences.
+
 ## Useful links
 
 - [CoovaChilli captive portal](https://openwrt.org/docs/guide-user/services/captive-portal/wireless.hotspot.coova-chilli?s[]=coovachilli)
