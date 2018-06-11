@@ -1,47 +1,35 @@
 # vim: filetype=uci
 
 config chilli
-    option radiusnasid "nasid01"
-    option radiussecret "<secret>"
-    option uamsecret "<secret>"
+    option radiussecret "please-change-me"
+    option uamsecret "please-change-me"
 
-    option locationname "OpenWrt"
-    option radiuslocationname "OpenWrt,1"
-    option radiuslocationid 	"network=OpenWrt"
-    
-    option radiusserver1 "147.75.32.61"
-    option radiusserver2 "147.75.32.61"
-    
+    option radiusserver1 "cloudberry.innovationgarage.tech"
+    option radiusserver2 "cloudberry.innovationgarage.tech"
+
+    option wwwdir '/etc/chilli/www'
+    option wwwbin '/etc/chilli/wwwsh'
+  
+    option uamuiport '4990'
+    option uamport '3990'
     option dhcpif "br-lan"
 
-    option dns1 8.8.8.8
-    option dns2 8.8.4.4
+    option dns1 '8.8.8.8'
+    option dns2 '8.8.4.4'
 
     option tundev 'tun0'
-    option net 192.168.180.0/22
-    option uamlisten 192.168.182.1
-    option lease 86400
-    option leaseplus 600
-    
-    option uamserver "http://147.75.32.61/login/cp/index.html"
-    option uamuiport 4990
-    option uamanydns 1
-    option uamaliasname login
-    option nouamsuccess 1
+    option net '192.168.180.0/22'
+    option uamlisten '192.168.182.1'
+    option lease '86400'
+    option leaseplus '600'
+
+    option uamserver 'http://192.168.182.1:4990/www/login.chi'
+    option uamhomepage 'http://192.168.182.1:3990/www/coova.html'
 
     option uamallowed "147.75.32.61,\
-                       192.168.0.10,\
-                       192.168.0.3,\
-		       100.85.197.11,\
-                       100.86.65.1,\
-                       100.86.65.181,\
-                       195.88.55.16,\
-                       www.google.com,\
-                       www.vg.no,\
-                       www.finn.no"
-
-    option swapoctets 1
-    option interval 3600
+    		       192.168.182.1,\
+		       10.0.0.1/24,\
+                       www.vg.no"
 
     option network ''
     option domain "lan"

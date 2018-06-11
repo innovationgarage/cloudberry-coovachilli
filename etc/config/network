@@ -18,4 +18,5 @@ config interface 'lan'
 config interface 'wan'
 	option proto 'dhcp'
 	option ifname 'eth1'
-	option dns '185.83.167.68 8.8.8.8 1.1.1.1'
+	option dns '8.8.8.8 1.1.1.1'
+	
