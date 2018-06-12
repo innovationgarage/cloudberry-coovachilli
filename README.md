@@ -22,3 +22,4 @@ correct values.  Running grep should show all occurrences.
 - Don't mix WAN and LAN.
 - Disable dnsmasq, chilli already handles DHCP requests so having both dnsmasq
   running might cause issues.
+- Make sure [haserl](http://haserl.sourceforge.net) is installed, alternatively install running `opkg install haserl`.
