@@ -10,6 +10,7 @@ correct values.  Running grep should show all occurrences.
 - [CoovaChilli captive portal](https://openwrt.org/docs/guide-user/services/captive-portal/wireless.hotspot.coova-chilli?s[]=coovachilli)
 - [CoovaChilli - man pages](http://coova.github.io/CoovaChilli/man-pages.html)
 - [Coova website](https://coova.github.io)
+- [Chilli Access Controller On Raspberry Pi Model B V1.2](Rpi.md)
 
 ## Troubleshooting
 
