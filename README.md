@@ -24,3 +24,4 @@ correct values.  Running grep should show all occurrences.
 - Disable dnsmasq, chilli already handles DHCP requests so having both dnsmasq
   running might cause issues.
 - Make sure [haserl](http://haserl.sourceforge.net) is installed, alternatively install running `opkg install haserl`.
+- Check haserl and scripts work properly by running `/etc/chilli/wwwsh /etc/chilli/www/login.chi`.
