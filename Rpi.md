@@ -46,6 +46,8 @@ to the onboard ethernet port
 
 ### Install dependencies
 
+Apply https://git.openwrt.org/?p=openwrt/openwrt.git;a=commitdiff;h=efb6ca189641aec64ba94f0d6d4e008fb2c1668b to lib/functions.sh
+
     $ opkg update
     $ opkg install git-http ca-certificates ca-bundle libustream-openssl haserl kmod-usb-net-asix
     
