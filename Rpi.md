@@ -48,6 +48,8 @@ to the onboard ethernet port
 
     $ opkg update
     $ opkg install git-http ca-certificates ca-bundle libustream-openssl haserl kmod-usb-net-asix
+    
+    opkg install kmod-rtl8xxxu rtl8188eu-firmware
 
 If you see any collected errors regarding kmod, those can be ignored as long as
 asix shows up in the logs.
