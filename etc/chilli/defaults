@@ -35,8 +35,8 @@ HS_NASID=nas01
 HS_RADIUS=localhost
 HS_RADIUS2=localhost
 HS_UAMALLOW=www.coova.org
-HS_RADSECRET=please-change-me    # Set to be your RADIUS shared secret
-HS_UAMSECRET=please-change-me    # Set to be your UAM secret
+HS_RADSECRET=testing123    # Set to be your RADIUS shared secret
+HS_UAMSECRET=testing123    # Set to be your UAM secret
 HS_UAMALIASNAME=chilli
 
 #  Configure RADIUS proxy support (for 802.1x + captive portal support)
@@ -179,14 +179,14 @@ HS_WWWBIN=/etc/chilli/wwwsh
 #   Some configurations used in certain user interfaces
 #
 HS_PROVIDER=Coova
-HS_PROVIDER_LINK=http://www.coova.org/
+HS_PROVIDER_LINK=https://www.innovationgarage.no/
 
 
 ###
 #   WISPr RADIUS Attribute support
 #
 
-HS_LOC_NAME="My HotSpot"	   # WISPr Location Name and used in portal
+HS_LOC_NAME="Innovation Garage"	   # WISPr Location Name and used in portal
 
 #   WISPr settings (to form a proper WISPr-Location-Id)
 # HS_LOC_NETWORK="My Network"	   # Network name
