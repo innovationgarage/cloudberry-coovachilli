@@ -7,7 +7,7 @@ access controller. Please have the following items prepared before starting
 - Compatible power usb cable.
 - USB power hub.
 - USB ethernet.
-- Compatible tp-link wifi USB adapter>
+- Compatible tp-link wifi USB adapter.
 - USB Keyboard.
 - HDMI monitor and cable.
 - SDcard.
@@ -29,8 +29,9 @@ Flash the SDcard with the image
 
 ## Getting Chilli
 
-When the device boots up with the brand new install, make some temporary network changes.
-Like making lan use dhcp:
+By default OpenWrt/LEDE uses a static IP address. This will likely not work out
+of the box on your network. So we need to switch to using dhcp for the `lan`
+interface
 
     # /etc/config/network
     # Change only the lan section to look like
@@ -38,16 +39,20 @@ Like making lan use dhcp:
         option ifname 'eth0'
         option proto 'dhcp'
 
-Restart the network for the changes to take effect and plug in a ethernet cable to the onboard ethernet port
+Restart the network for the changes to take effect and plug in a ethernet cable
+to the onboard ethernet port
 
     $ /etc/init.d/network restart
 
-Install git and other dependencies
+### Install dependencies
 
     $ opkg update
-    $ opkg install git-http ca-certificates ca-bundle libustream-openssl haserl
+    $ opkg install git-http ca-certificates ca-bundle libustream-openssl haserl kmod-usb-net-asix
 
-Prepare chilli setup
+If you see any collected errors regarding kmod, those can be ignored as long as
+asix shows up in the logs.
+
+### Prepare chilli setup
 
     $ /etc/init.d/dnsmasq disable
     $ /etc/init.d/dnsmasq stop
@@ -55,12 +60,12 @@ Prepare chilli setup
     $ cp -r cloudberry-coovachilli/etc/chilli /etc/chilli
     $ cp  cloudberry-coovachilli/etc/config/* /etc/config
 
-Before procedding to installing chilli 
+### Before procedding to installing chilli 
 
     # Verify the radiussecret and uamsecret in /etc/config/chilli is correct
     # Verify the HS_RADSECRET and HS_UAMSECRET in /etc/chilli/defaults is correct
 
-Install chilli
+### Install chilli
 
     $ opkg install coova-chilli
     # The chilli config warnings can be ignored.
