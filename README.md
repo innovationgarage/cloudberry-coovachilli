@@ -14,6 +14,8 @@ correct values.  Running grep should show all occurrences.
 
 ## Troubleshooting
 
+- Makse sure that `/etc/chilli/defaults` has the correct `HS_RADSECRET` and `HS_UAMSECRET`.
+- Makse sure that `/etc/config/chilli` has the correct `radiussecret` and `uamsecret`.
 - Chilli provides a lot of debug information that can be turned on by using the
   `--debug` flag.  The file to change for this is in `/etc/init.d/chilli` where
   you can look for the `start_chilli()` function.
