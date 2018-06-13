@@ -39,7 +39,7 @@ chilli is running via `ps` is a good idea.
 
 ### Misc
 
-- Don't mix WAN and LAN.
+Don't mix WAN and LAN. Make sure the WAN interface has a stable connection.
 
 Disable `dnsmasq`, chilli already handles DHCP requests so having both dnsmasq
 running might cause issues.
