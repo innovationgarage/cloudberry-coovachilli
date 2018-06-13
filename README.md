@@ -2,9 +2,6 @@
 
 Configuration to be used with a cloudberry chilli deployment.
 
-Please note that all occurrences of `please-change-me` must be updated with the
-correct values.  Running grep should show all occurrences.
-
 ## Useful links
 
 - [Chilli Access Controller On Raspberry Pi Model B V1.2](Rpi.md)
