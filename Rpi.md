@@ -65,16 +65,19 @@ asix shows up in the logs.
     $ /etc/init.d/dnsmasq stop
     $ git clone https://github.com/innovationgarage/cloudberry-coovachilli
 
-### Before procedding to installing chilli 
-
-    # Verify the radiussecret and uamsecret in /etc/config/chilli is correct
-    # Verify the HS_RADSECRET and HS_UAMSECRET in /etc/chilli/defaults is correct
-
 ### Install chilli
 
     $ opkg install coova-chilli
     # The chilli config warnings can be ignored.    
     $ rsync -a /root/cloudberry-coovachilli/etc/ /etc/
+
+### Configure secrets
+
+    # Change the radiussecret and uamsecret in /etc/config/chilli
+    # Change the HS_RADSECRET and HS_UAMSECRET in /etc/chilli/defaults
+
+### Reboot
+
     $ reboot
 
 ## Hardware setup
