@@ -17,7 +17,7 @@ access controller. Please have the following items prepared before starting
 
 Download the [lede-17.01.4-brcm2708-bcm2710-rpi-3-ext4-sdcard.img.gz][img]
 
-    $ wget https://downloads.lede-project.org/releases/17.01.4/targets/brcm2708/bcm2710/lede-17.01.4-brcm2708-bcm2710-rpi-3-ext4-sdcard.img.gz
+    $ wget https://downloads.lede-project.org/releases/17.01.4/targets/brcm2708/bcm2708/lede-17.01.4-brcm2708-bcm2708-rpi-ext4-sdcard.img.gz
 
 Uncompress the archive
 
@@ -51,6 +51,10 @@ Apply https://git.openwrt.org/?p=openwrt/openwrt.git;a=commitdiff;h=efb6ca189641
     $ opkg update
     $ opkg install rsync git-http ca-certificates ca-bundle libustream-openssl haserl kmod-usb-net-asix
     $ opkg install kmod-rtl8xxxu rtl8188eu-firmware
+
+You might have to apply this patch before installing the above packages:
+
+    https://git.openwrt.org/?p=openwrt/openwrt.git;a=commitdiff;h=efb6ca189641aec64ba94f0d6d4e008fb2c1668b
 
 If you see any collected errors regarding kmod, those can be ignored as long as
 asix shows up in the logs.
