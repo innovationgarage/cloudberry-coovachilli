@@ -1,0 +1,27 @@
+#! /bin/sh
+
+VERSION=1
+
+
+if [ ! -e "/etc/.cloudberry-sysinit" ]; then
+  CURRENT_VERSION=0
+else
+  CURRENT_VERSION="$("/etc/.cloudberry-sysinit")"
+fi
+
+if [ $VERSION -gt $CURRENT_VERSION ]; then
+  opkg update
+  opkg install ca-certificates ca-bundle libustream-openssl haserl rsync coova-chilli
+
+  /etc/init.d/dnsmasq disable
+  /etc/init.d/dnsmasq stop
+  rsync -a --progress /cloudberry-sysinit/etc/ /etc/
+
+  echo $VERSION > "/etc/.cloudberry-sysinit"
+
+  # Somehow the above leaves the system in a wierd state, so reboot to get back to normal...
+  reboot
+
+fi
+
+exit 0
