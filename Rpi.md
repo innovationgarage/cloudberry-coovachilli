@@ -66,6 +66,7 @@ asix shows up in the logs.
     $ /etc/init.d/dnsmasq stop
     $ /etc/init.d/chilli stop
     $ git clone https://github.com/innovationgarage/cloudberry-coovachilli
+    $ rm -rvf /etc/chilli
     $ cp -r cloudberry-coovachilli/etc/chilli /etc/chilli
     $ cp  cloudberry-coovachilli/etc/config/* /etc/config
 
