@@ -36,3 +36,4 @@ config chilli
     
     option ipup '/etc/chilli/up.sh'
     option ipdown '/etc/chilli/down.sh'
+    option radiuslocationid 'oslo-office'
