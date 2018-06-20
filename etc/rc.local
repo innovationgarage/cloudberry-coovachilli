@@ -10,6 +10,10 @@ else
 fi
 
 if [ $VERSION -gt $CURRENT_VERSION ]; then
+  uci delete network.lan
+  uci commit
+  /etc/init.d/network restart
+
   opkg update
   opkg install ca-certificates ca-bundle libustream-openssl haserl rsync coova-chilli
 
