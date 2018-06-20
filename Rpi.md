@@ -49,16 +49,10 @@ to the onboard ethernet port
 Apply https://git.openwrt.org/?p=openwrt/openwrt.git;a=commitdiff;h=efb6ca189641aec64ba94f0d6d4e008fb2c1668b to lib/functions.sh
 
     $ opkg update
-    $ opkg install git-http ca-certificates ca-bundle libustream-openssl haserl kmod-usb-net-asix
-    
-    opkg install kmod-rtl8xxxu rtl8188eu-firmware
+    $ opkg install git-http ca-certificates ca-bundle libustream-openssl haserl kmod-usb-net-asix rsync coova-chilli
 
 If you see any collected errors regarding kmod, those can be ignored as long as
 asix shows up in the logs.
-
-### Install chilli
-
-    $ opkg install coova-chilli
 
 ### Configure chilli setup
 
@@ -68,10 +62,8 @@ asix shows up in the logs.
     $ git clone https://github.com/innovationgarage/cloudberry-coovachilli
     $ rsync -a --progress cloudberry-coovachilli/etc/ /etc/
 
-### Before starting Chilli
+### Reboot
 
-    # Verify the radiussecret and uamsecret in /etc/config/chilli is correct
-    # Verify the HS_RADSECRET and HS_UAMSECRET in /etc/chilli/defaults is correct
     $ reboot
 
 ## Hardware setup
