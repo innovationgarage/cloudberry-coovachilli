@@ -56,23 +56,23 @@ Apply https://git.openwrt.org/?p=openwrt/openwrt.git;a=commitdiff;h=efb6ca189641
 If you see any collected errors regarding kmod, those can be ignored as long as
 asix shows up in the logs.
 
-### Prepare chilli setup
+### Install chilli
+
+    $ opkg install coova-chilli
+
+### Configure chilli setup
 
     $ /etc/init.d/dnsmasq disable
     $ /etc/init.d/dnsmasq stop
+    $ /etc/init.d/chilli stop
     $ git clone https://github.com/innovationgarage/cloudberry-coovachilli
     $ cp -r cloudberry-coovachilli/etc/chilli /etc/chilli
     $ cp  cloudberry-coovachilli/etc/config/* /etc/config
 
-### Before procedding to installing chilli 
+### Before starting Chilli
 
     # Verify the radiussecret and uamsecret in /etc/config/chilli is correct
     # Verify the HS_RADSECRET and HS_UAMSECRET in /etc/chilli/defaults is correct
-
-### Install chilli
-
-    $ opkg install coova-chilli
-    # The chilli config warnings can be ignored.
     $ reboot
 
 ## Hardware setup
