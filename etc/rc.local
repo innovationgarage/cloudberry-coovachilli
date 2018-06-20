@@ -1,12 +1,15 @@
 #! /bin/sh
 
+exec > /etc/.cloudberry-sysinit.log 2>&1
+set -x
+
 VERSION=1
 
 
-if [ ! -e "/etc/.cloudberry-sysinit" ]; then
+if [ ! -e "/etc/.cloudberry-sysinit.version" ]; then
   CURRENT_VERSION=0
 else
-  CURRENT_VERSION="$("/etc/.cloudberry-sysinit")"
+  CURRENT_VERSION="$("/etc/.cloudberry-sysinit.version")"
 fi
 
 if [ $VERSION -gt $CURRENT_VERSION ]; then
@@ -21,7 +24,7 @@ if [ $VERSION -gt $CURRENT_VERSION ]; then
   /etc/init.d/dnsmasq stop
   rsync -a --progress /cloudberry-sysinit/etc/ /etc/
 
-  echo $VERSION > "/etc/.cloudberry-sysinit"
+  echo $VERSION > "/etc/.cloudberry-sysinit.version"
 
   # Somehow the above leaves the system in a wierd state, so reboot to get back to normal...
   reboot
