@@ -40,3 +40,4 @@ config chilli
     #option papalwaysok '1'
     option nouamsuccess '1'
     #option localusers '/etc/chilli/localusers'
+    option uamanydns   1
