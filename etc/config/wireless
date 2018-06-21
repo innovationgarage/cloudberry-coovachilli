@@ -11,6 +11,7 @@ config wifi-iface
 	option device 'radio0'
 	option mode 'ap'
 	option ssid 'OpenWrt'
+	option key 'alexFree'
 	option encryption 'none'
 	option network 'lan'
 
