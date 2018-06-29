@@ -3,6 +3,8 @@
 config chilli
     option radiussecret "testing123"
     option uamsecret "testing123"
+    
+    option radiusnasid "d23eba83-fc94-4ede-90fe-34a7ceb468e9"
 
     option radiusserver1 "cloudberry.innovationgarage.tech"
     option radiusserver2 "cloudberry.innovationgarage.tech"
